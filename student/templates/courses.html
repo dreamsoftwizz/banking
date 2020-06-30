@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="row" id="header2">
+<nav class="navbar-inverse" id="nav">
+<ul class="nav navbar-nav">
+<h2>Courses</h2>
+</ul>
+</nav>
+</div>
+
+
+
+
+<div class="container">
+<div class="col-md-8 col-md-offset-2">
+<!--<h2 style="font-size:40px;"><b>COURSES</b></h2>-->
+<div id="p1">
+{% for courses in object_list %}
+
+<table  id="customers"class="table table-bordered table-striped table-hover" style="border:5px double black;">
+
+<thead>
+<tr>
+<td  class="bold" id="c1"><b>Course Name</b></td>
+<td><p>{{ courses.name }}</p></td>
+</tr>
+<tr>
+<td  class="bold" id="c1"><b>Description</b></td>
+<td><p>{{ courses.description}}</p></td>
+</tr>
+<tr>
+<td  class="bold" id="c1"><b>Eligibility</b></td>
+<td><p>{{ courses.eligibility}}</p></td>
+</tr>
+<tr>
+<td  class="bold" id="c1"><b>Fees</b></td>
+<td><p>{{ courses.fees}}</p></td>
+</tr>
+<tr>
+<td  class="bold" id="c1"><b>Timing</b></td>
+<td><p>{{ courses.timing}}</p></td>
+</tr>
+</thead>
+</table>
+{% endfor %}
+</div>
+</div>
+</div>
+{% endblock %} 

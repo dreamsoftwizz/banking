@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="row" id="header2">
+<nav class="navbar-inverse" id="nav">
+<ul class="nav navbar-nav">
+<h2>Success Stories</h2>
+</ul>
+</nav>
+</div>
+
+
+
+<div id="p1">
+<!--<h1 class="text-center success1">SUCCESS STORIES</h1>-->
+<div class="row" id="success1">
+<div class="col-md-10 col-md-offset-1">
+
+{% for success in object_list %}
+
+<div class="col-md-2">
+<img src='/media/{{ success.photo}}' height='150' width='100%' />
+<p id="success2">{{ success.name}}</p>
+<p style="font-size:11px;">{{success.rollno }}</p>
+<p style="font-size:11px;">{{ success.clearcourse}}</p>
+</div>
+
+{% endfor %}
+</div>
+</div>
+</div>
+{% endblock %} 

@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+
+<div class="row"> </br></br>
+<div class="col-md-6 col-md-offset-3"  id="register">
+<h1 class="text-center" style="font-family:Comic Sans MS;" ><b>REGISTRATION FORM</b></h1> </br>
+<p align=right>(registration fees: Rs.1000)  </p>                                  
+</br>
+<form action="/insert1" method="post">
+{% csrf_token %}
+
+<div class="form-group">
+<label>Name</label>
+<input name="name" id="name" class="form-control" type="text" required=""> <!--style="width:400px;"-->
+</div>
+
+<div class="form-group">
+<label>Father Name</label>
+<input name="fathername" id="fname" class="form-control" type="text" required="">
+</div>
+
+<div class="form-group">
+<label>Mother Name</label>
+<input name="mothername" id="mname" class="form-control" type="text" required="">
+</div>
+
+<div class="form-group">
+<label>Gender</label>
+<br>
+Male <input type="radio" name="gender" value="Male" />
+Female <input type="radio" name="gender" value="Female" />
+</div>
+
+<div class="form-group">
+<label>Contact no</label>
+<input name="contactno" id="lname" class="form-control">
+</div>
+
+<div>
+<label>Date of Birth</label>
+<input type="text" name="dateofbirth" data-date-format="dd-mm-yyyy" class="form-control" id="datepicker">
+</div>
+    
+<div class="form-group">
+<label>Address</label>
+<textarea cols="40" rows="10" id="Address" name="address" class="textarea form-control" required=""></textarea>
+</div>
+
+<div class="form-group">
+<label>Qualification</label>
+<select class="form-control" name="qualification">
+<option value="">-select-</option>
+<option>Matric</option>
+<option>Graduation</option>
+<option>Post Graduation</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Stream/Session</label>
+<input name="stream" id="session" class="form-control" required="" placeholder="eg: MCA 2019 or 12th 2018">
+</div>
+
+<div class="form-group">
+<label>Course</label>
+<select class="form-control" name="course">
+<option value="">-select-</option>
+<option>IBPS clerk</option>
+<option>IBPS PO</option>
+<option>SBI clerk</option>
+<option>SSC CGL</option>
+<option>SSC CHSL</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Preferred Time</label>
+<select class="form-control" name="prefferedtime">
+<option value="">-select Time-</option>        
+<option>9:00 A.M. to 1 P.M.</option>
+<option>2:00 P.M. to 5:00 P.M.</option>
+</select>
+</div>
+
+<div>
+<label>Registration Date</label>
+<input type="text" name="registrationdate"  class="form-control" id="datepicker1" readonly>
+</div>
+<br>        
+<div class="form-group mb-0">
+<center><input class="btn btn-info" style="font-size:35px;" type="submit" name="submit" value="SUBMIT NOW"></center>
+</div>
+    
+</form>
+</div>						
+</div>
+</br></br>
+<script>
+n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("datepicker1").value = d + "-" + m + "-" + y;
+
+
+$(document).ready(function(){
+$("#datepicker").datepicker({
+autoclose: true
+});
+
+
+/*$("#datepicker1").datepicker({
+autoclose: true,
+todayHighlight:true
+}).datepicker('update',new Date());*/
+});
+</script>
+
+
+{% endblock %}

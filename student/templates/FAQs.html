@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="row" id="header2">
+<nav class="navbar-inverse" id="nav">
+<ul class="nav navbar-nav">
+<h2>FAQs</h2>
+</ul>
+</nav>
+</div>
+
+
+
+
+<div class="container">
+<div id="p1">
+<div class="col-md-10 col-md-offset-1" id="faq">
+<!--<h2 class="text-center">FAQs</h2>-->
+
+<div class="panel-group" id="accordion">
+
+{% for FAQs in object_list %}
+
+<div class="panel panel-default">
+    <div class="panel-heading" style=" background:#baa69c; color:#d9163d;">
+      <h4 class="panel-title" style="font-size:25px;">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ FAQs.id }}">
+        <b>Question:</b> {{ FAQs.question }}
+		<span class="glyphicon glyphicon-plus pull-right"></span>
+		</a>
+      </h4>
+    </div>
+    <div id="collapse{{ FAQs.id }}" class="panel-collapse collapse ">
+      <div class="panel-body" style="font-size:20px;"><b>Answer:</b> {{ FAQs.answer}}</div>
+    </div>
+  </div>
+
+
+{% endfor %}
+</div>
+</div>
+</div>
+</div></br></br>
+
+{% endblock %} 

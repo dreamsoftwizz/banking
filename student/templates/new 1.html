@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="slider row" id="tagline">
+    
+	<div>
+	<img src="{% static 't3.jpg' %}" height="500" width="100%">
+	</div>
+	<div>
+	<img src="{% static 't4.jpg' %}" height="500" width="100%">
+	</div>
+	<div>
+	<img src="{% static 't5.jpg' %}" height="500" width="100%">
+	</div>
+    
+</div>
+
+
+<script src="{% static 'bootstrap-3.3.7-dist/jquery.js' %}"></script>
+<script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'bxslider-4-4.2.12/dist/jquery.bxslider.min.js' %}"></script>
+<script>
+$(document).ready (function(){
+$('.slider').bxSlider({
+auto: true,
+autoControls: true
+});
+});
+</script>
+<div class="row text-center" id="intro">
+<div class="col-md-10 col-md-offset-1">
+<h2 id="font">HARNESS YOURSELF FOR BEST <br> BANKING SKILL</h2>
+
+<br>
+<br>
+<div class="col-md-4">
+<div class="col-md-12 threedivs">
+<span class="glyphicon glyphicon-thumbs-up icon" ></span>
+<h3>PERFECT <br>KNOWLEDGE</h3>
+</div>
+</div>
+<div class="col-md-4">
+<div class="col-md-12 threedivs">
+<span  class="glyphicon glyphicon-ok icon"></span>
+<h3>PERFECT PREPARATION</h3>
+
+</div>
+</div>
+<div class="col-md-4">
+<div class="col-md-12 threedivs">
+<span  class="glyphicon glyphicon glyphicon-send icon"></span>
+<h3>PERFECT OPPORTUNITIES</h3>
+
+</div>
+</div>
+</div>
+</div>
+<div class="row" id="updates">
+<h1 id="font" class="text-center"><b>UPDATE AND ANNOUNCEMENT</b><h1>
+<br><br>
+<div class="col-md-6">
+<h2 style="color:#21b7fc;"><b>Latest Updates</b><h2>
+<marquee direction ="up">
+<ul>
+<li><h4>Union budget 2020-2021</h4></li>
+<li><h4>Highlight of INSURANCE&FINANCIAL MARKETING AWARNESS NOTE-2019</h4></li>
+<li><h4>PTR(POINTS TO REMEMBER)</h4></li>
+<li><h4>Hightlights Of Economic Survey 2019-20</h4></li>
+</ul>
+</marquee>
+</div>
+<div class="col-md-6" id="vacancy" style="height: 250px;">
+<br>
+<h1 class="text-center"><b>Vacancy & Announcements</b></h1>
+
+<h3 class="text-center" id="blinktext" style="color:#e50000"><blink><b>8000 Vacancies of Clerical Cadre</b></blink></h3>
+</div>
+</div>
+
+<div class="row" id="banner" style="height: 500px;">
+
+<h3 class="text-center"  style="color:black;"><b>Dream Careers Banking Academy 
+welcomes you to explore the world of the largest bank Pre-recruitment Training
+ Istitute in India</b> </h3>
+ <br><br><br><br>
+ <div class="col-md-4">
+ <span class="count" id="cnt"><b>360000</b></span>
+<h3><b>STUDENTS TRAINED <br>SO FAR</b></h3>
+</div>
+<div class="col-md-4">
+<span class="count" id="cnt"><b>42</b></span><span id="cnt">Yrs</span>
+<h3><b>OF TRAINING IN BANKING SECTOR</b></h3>
+</div>
+<div class="col-md-4 ">
+<span class="count" id="cnt"><b>91000</b></span>
+<h3><b>STUDENTS IN VARIOUS BANKS</b></h3>
+</div>
+
+</div>
+<div class="row text-center" id="interest">
+<h3  id="font" >I AM INTERESTED IN </h3>
+<br>
+<div class="col-md-4" >
+<div class="col-md-12 interest">
+<img src="{% static 't8.jpg' %}"height="125" width="200"/>
+<p><b>OPPORTUNITY IN BANK</b></p>
+<button id="b" onclick="vm()">VIEW MORE</button>
+</div>
+</div>
+<div class="col-md-4">
+<div class="col-md-12 interest">
+<img src="{% static 't9.jpg' %}"height="125" width="200"/>
+<p><b>COURSES</b></p>
+<button id="b" onclick="vm()">VIEW MORE</button>
+</div>
+</div>
+<div class="col-md-4" >
+<div class="col-md-12 interest">
+<img src="{% static 't10.jpg' %}"height="125" width="125"/>
+<p><b>STUDY MATERIAL</b></p>
+<button id="b" onclick="vm()">VIEW MORE</button>
+</div>
+</div>
+</div>
+<div class="row text-center" id="success">
+<h1><b>SUCCESS STORIES</b></h1>
+<br>
+<br>
+<div class="row">
+<div class="col-md-3">
+<img src="{% static 'g7.jpg' %}"height="200" width="200"/>
+</div>
+<div class="col-md-3">
+<img src="{% static 'g8.jpg' %}"height="200" width="200"/>
+</div>
+<div class="col-md-3">
+<img src="{% static 'g9.jpg' %}"height="200" width="200"/>
+</div>
+<div class="col-md-3">
+<img src="{% static 'g10.jpg' %}"height="200" width="200"/>
+</div>
+</div>
+<br>
+<br>
+<br>
+<h4 style="color: white;">We Take imensive pride in saying that we are in this field from the<br> past four decades
+and every year several of our successful student<br> make it to our secure job in Prestigious
+Banks and Insurance<br> organisations across India. </h4>
+<br>
+
+<div ><button style="border: 3px solid white; width: 250px; background-color:#21b7fc; color:white;">Read More Of Success Stories</button></div>
+</div>
+
+{% endblock %}

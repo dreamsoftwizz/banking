@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="row" id="header2">
+<nav class="navbar-inverse" id="nav">
+<ul class="nav navbar-nav">
+<h2>Study Material</h2>
+</ul>
+</nav>
+</div>
+
+
+
+
+<!--<h1 class="text-center success1"><b>STUDY MATERIAL</b></h1>-->
+<div class="row" style="padding:30px;">
+<div id="p1">
+{% for studymaterial in object_list %}
+<div class="col-md-4" id="study1">
+<p  style="font-size:22px; padding-bottom:10px; font-family:Georgia;" ><b>{{ studymaterial.booktitle }}</b></p>
+<a href='{{ studymaterial.link}}' target='_blank'>
+<img src='/media/{{ studymaterial.photo}}' height='200' width='100%' /></br></br>
+</a>
+</div>
+{% endfor %}
+</div>
+
+</div>
+</br></br>
+{% endblock %} 

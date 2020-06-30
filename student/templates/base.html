@@ -1,0 +1,130 @@
+{% load staticfiles %}
+<html>
+<head>
+<title>Banking Academy</title>
+<link href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css'%}" type="text/css" rel="stylesheet"/>
+<link href="{% static 'bootstrap-3.3.7-dist/css/bootstrap-theme.min.css'%}" type="text/css" rel="stylesheet"/>
+<link href="{% static 'style.css' %}" type="text/css" rel="stylesheet"/>
+<link href="{% static 'bxslider-4-4.2.12/dist/jquery.bxslider.min.css' %}" type="text/css" rel="stylesheet"/>
+<script src="{% static 'bootstrap-3.3.7-dist/jquery.js' %}"></script>
+<script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'bxslider-4-4.2.12/dist/jquery.bxslider.min.js' %}"></script>
+<link href="{% static 'bootstrap-3.3.7-dist/bootstrap_datepicker.css'%}" type="text/css" rel="stylesheet"/>
+<script src="{% static 'bootstrap-3.3.7-dist/bootstrap_datepicker.js' %}"></script>
+</head>
+<body>
+<div class="container-fluid">
+<div  class="row" id="st">
+<div class="col-md-3">
+<img src="{% static 'logoo.jpg' %}"height="95" width="95" class="img-circle pull left"/>
+</div>
+<div class="col-md-9" id="h">
+<h1 id="hfont"><b>Dream Careers Banking Academy</b></h1>
+</div>
+</div>
+
+
+<div class="row" id="header">
+
+<nav class="navbar-inverse" id="nav">
+<ul class="nav navbar-nav">
+<li><a href="/home/">HOME</a></li>
+<li><a href="/about/">ABOUT US</a></li>
+<li><a href="/courses/">COURSES </a></li>
+<!--<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" >COURSE
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/courses/">IBPS Clerk</a></li>
+          <li><a href="#">IBPS PO</a></li>
+          <li><a href="#">SBI CLERK</a></li>
+		  <li><a href="#">SSC CGL</a></li>
+		  <li><a href="#">SSC CHSL</a></li>
+        </ul>
+      </li>-->
+<li><a href="/studymaterial/">STUDY MATERIAL</a></li>
+<li><a href="/video/">VIDEOS</a></li>
+<li><a href="/vacancy/">VACANCIES</a></li>
+<li><a href="/FAQs/">FAQs</a></li>
+<li><a href="/registration/">REGISTRATION </a></li>
+<li><a href="/contact/">CONTACT US </a></li>
+
+<li><a href="/success/">SUCCESS STORIES</a></li>
+</ul>
+</nav>
+</div>
+
+
+
+{% block content %}
+
+{% endblock %}
+
+
+
+
+
+
+
+<div class="row text-center" id="contact">
+<div class="col-md-4">
+
+<h3>Dream Careers Banking Academy</h3>
+ <p>Banking Academy welcomes you to explore the world of the largest bank Pre-recruitment Training Institute in India</p>
+<!--<img src="{% static 'd5.png' %}"height="25" width="25" class="img-circle"/>
+<img src="{% static 'd6.png' %}"height="25" width="25" class="img-circle"/>
+<img src="{% static 'd7.jpg' %}"height="25" width="25" class="img-circle"/>
+<img src="{% static 'd8.png' %}"height="25" width="25" class="img-circle"/>-->
+</div>
+<div class="col-md-4">
+<h3>Contact Us</h3>
+
+<p>E-mail: dreamcareers@gmail.com</p>
+<p>Phone: +8454515374145</p>
+
+</div>
+<div class="col-md-4" id="footernav">
+<h3>Menu</h3>
+<div class="col-md-6">
+<ul class="nav">
+<li><a href="/home/">HOME</a></li>
+<li><a href="/about/">ABOUT US</a></li>
+<li><a href="/courses/">COURSES</a></li>
+<li><a href="/studymaterial/">STUDY MATERIAL</a></li>
+<li><a href="/video/">VIDEOS</a></li>
+</ul>
+</div>
+<div class="col-md-6">
+<ul class="nav ">
+<li><a href="/vacancy/">VACANCIES</a></li>
+<li><a href="/FAQs/">FAQs</a></li>
+<li><a href="/registration/">REGISTRATION</a></li>
+<li><a href="/contact/">CONTACT US</a></li>
+<li><a href="/success/">SUCCESS STORIES </a></li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+$('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+});
+</script>
+<div class="row" id="footerlast">
+<h3 style="font-size:20px;"><b>copyright @ 2020 All rights Dream Careers Banking Academy</b></h3>
+</div>
+
+</div>
+</body>
+</html>
+

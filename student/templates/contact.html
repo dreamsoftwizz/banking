@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+
+<!--<div class="row contact-address1">-->
+
+</br></br>
+<h1 id="c1" class="text-center"  style="font-family:Comic Sans MS;" ><b>CONTACT FORM</b></h1></br>
+<div class="col-md-4">
+<div class="contact1">
+<span class="glyphicon glyphicon-map-marker icon1"></span>
+<h4>Address</h4>
+<p>Opp.Street No.14, Ajit Road</p>
+<p>Bathinda, India</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="contact1">
+<span class="glyphicon glyphicon-earphone icon1"></span>
+<h4>Phone Number</h4>
+<a href="tel:9464255225">+91 94642-55225</a> </br>
+<a href="tel:7508512645">+91 75085-12645</a></br></br>
+</div>
+</div>
+<div class="col-md-4">
+<div class="contact1">
+<span class="glyphicon glyphicon-envelope icon1"></span>
+<h4>Email Address</h4>
+<a href="mailto:dreamcareers@gmail.com"><p>dreamcareers@gmail.com</p></a>
+<a href="mailto:info@dreamcareers.com"><p>info@dreamcreers.com</p></a>
+</div></br></br>
+</div>
+
+<h3 style="color:#fab4c1; font-size:40px;"><center><b>LEAVE COMMENT</b></center></h3></br></br>
+<div class="contact-comment-section">
+<div id="form-messages"></div>
+<form action="/insert" method="post">
+
+<div class="row contact-address1">
+
+{% csrf_token %}
+<fieldset>
+<div class="row">                                      
+<div class="col-md-6 col-sm-12">
+<div class="form-group">
+<label>First Name*</label>
+<input name="name" id="tx1" class="form-control" type="text" required="">
+</div>
+</div>
+<div class="col-md-6 col-sm-12">
+<div class="form-group">
+<label>Mobile</label>
+<input name="mobile" id="tx1" class="form-control" type="number">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6 col-sm-12">
+<div class="form-group">
+<label>Email*</label>
+<input name="email" id="tx1" class="form-control" type="email" required="">
+</div>
+</div>
+<div class="col-md-6 col-sm-12">
+<div class="form-group">
+<label>Subject *</label>
+<select class="form-control" name="subject" id="tx1">
+<option value="">-select-</option>
+<option>complaint</option>
+<option>suggest</option>
+<option>feedback</option>
+<option>general</option>
+</select>
+</div>
+</div>
+</div>
+<div class="row"> 
+<div class="col-md-12 col-sm-12">    
+<div class="form-group">
+<label>Message *</label>
+<textarea cols="40" rows="10" id="tx1" name="message" class="textarea form-control" required=""></textarea>
+</div>
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12">         
+<div class="form-group mb-0">
+<center><input  class="btn btn-info" style="font-size:35px; width: 250px; background-color:#21b7fc; color:white;" class="btn-send" type="submit" name="submit" value="SUBMIT NOW"></center>
+</div>
+</div>
+</div>    
+</fieldset>
+</form>						
+</div>
+</div></br></br>
+
+
+
+
+
+{% endblock %}

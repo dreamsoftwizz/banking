@@ -1,0 +1,367 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<!--<div class="slider row" id="tagline">
+    
+	<div>
+	<img src="{% static 't3.jpg' %}" height="500" width="100%">
+	</div>
+	<div>
+	<img src="{% static 't4.jpg' %}" height="500" width="100%">
+	</div>
+	<div>
+	<img src="{% static 't5.jpg' %}" height="500" width="100%">
+	</div>
+    
+</div>-->
+
+
+
+<script src="{% static 'full-width-slider.slider.standard/js/jssor.slider-28.0.0.min.js' %}" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_SlideoTransitions = [
+              [{b:-1,d:1,ls:0.5},{b:0,d:1000,y:5,e:{y:6}}],
+              [{b:-1,d:1,ls:0.5},{b:200,d:1000,y:25,e:{y:6}}],
+              [{b:-1,d:1,ls:0.5},{b:400,d:1000,y:45,e:{y:6}}],
+              [{b:-1,d:1,ls:0.5},{b:600,d:1000,y:65,e:{y:6}}],
+              [{b:-1,d:1,ls:0.5},{b:800,d:1000,y:85,e:{y:6}}],
+              [{b:-1,d:1,ls:0.5},{b:500,d:1000,y:195,e:{y:6}}],
+              [{b:0,d:2000,y:30,e:{y:3}}],
+              [{b:-1,d:1,rY:-15,tZ:100},{b:0,d:1500,y:30,o:1,e:{y:3}}],
+              [{b:-1,d:1,rY:-15,tZ:-100},{b:0,d:1500,y:100,o:0.8,e:{y:3}}],
+              [{b:500,d:1500,o:1}],
+              [{b:0,d:1000,y:380,e:{y:6}}],
+              [{b:300,d:1000,x:80,e:{x:6}}],
+              [{b:300,d:1000,x:330,e:{x:6}}],
+              [{b:-1,d:1,r:-110,sX:5,sY:5},{b:0,d:2000,o:1,r:-20,sX:1,sY:1,e:{o:6,r:6,sX:6,sY:6}}],
+              [{b:0,d:600,x:150,o:0.5,e:{x:6}}],
+              [{b:0,d:600,x:1140,o:0.6,e:{x:6}}],
+              [{b:-1,d:1,sX:5,sY:5},{b:600,d:600,o:1,sX:1,sY:1,e:{sX:3,sY:3}}]
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $LazyLoading: 1,
+              $CaptionSliderOptions: {
+                $Class: $JssorCaptionSlideo$,
+                $Transitions: jssor_1_SlideoTransitions
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$,
+                $SpacingX: 20,
+                $SpacingY: 20
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 1600;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic,700,700italic&subset=latin-ext,greek-ext,cyrillic-ext,greek,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
+    <style>
+        /* jssor slider loading skin spin css */
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /*jssor slider bullet skin 132 css*/
+        .jssorb132 {position:absolute;}
+        .jssorb132 .i {position:absolute;cursor:pointer;}
+        .jssorb132 .i .b {fill:#fff;fill-opacity:0.8;stroke:#000;stroke-width:1600;stroke-miterlimit:10;stroke-opacity:0.7;}
+        .jssorb132 .i:hover .b {fill:#000;fill-opacity:.7;stroke:#fff;stroke-width:2000;stroke-opacity:0.8;}
+        .jssorb132 .iav .b {fill:#000;stroke:#fff;stroke-width:2400;fill-opacity:0.8;stroke-opacity:1;}
+        .jssorb132 .i.idn {opacity:0.3;}
+
+        .jssora051 {display:block;position:absolute;cursor:pointer;}
+        .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+        .jssora051:hover {opacity:.8;}
+        .jssora051.jssora051dn {opacity:.5;}
+        .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+    </style>
+    <svg viewbox="0 0 0 0" width="0" height="0" style="display:block;position:relative;left:0px;top:0px;">
+        <defs>
+            <filter id="jssor_1_flt_1" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stddeviation="4"></feGaussianBlur>
+            </filter>
+            <radialGradient id="jssor_1_grd_2">
+                <stop offset="0" stop-color="#fff"></stop>
+                <stop offset="1" stop-color="#000"></stop>
+            </radialGradient>
+            <mask id="jssor_1_msk_3">
+                <path fill="url(#jssor_1_grd_2)" d="M600,0L600,400L0,400L0,0Z" x="0" y="0" style="position:absolute;overflow:visible;"></path>
+            </mask>
+        </defs>
+    </svg>
+    <div id="jssor_1" class="row" style="position:relative;top:0px;left:0px;height:560px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+        </div>
+        <div data-u="slides" class="col-md-12" style="cursor:default;position:relative;top:0px;left:0px;height:560px;overflow:hidden;">
+            <div style="background-color:#d3890e;">
+                <img data-u="image" style="opacity:0.8;" data-src="{% static 't3.jpg' %}" />
+                <div data-ts="flat" data-p="275" data-po="40% 50%" style="left:150px;top:40px;width:800px;height:300px;position:absolute;">
+                    <div data-to="50% 50%" data-t="0" style="left:50px;top:520px;width:400px;height:100px;position:absolute;color:#f0a329;font-family:'Roboto Condensed',sans-serif;font-size:84px;font-weight:900;letter-spacing:0.5em;">Dream Careers Banking Academy</div>
+                    <div data-to="50% 50%" data-t="1" style="left:50px;top:540px;width:400px;height:100px;position:absolute;opacity:0.5;color:#f0a329;font-family:'Roboto Condensed',sans-serif;font-size:84px;font-weight:900;letter-spacing:0.5em;">Dream Careers Banking Academy</div>
+                    <div data-to="50% 50%" data-t="2" style="left:50px;top:560px;width:400px;height:100px;position:absolute;opacity:0.25;color:#f0a329;font-family:'Roboto Condensed',sans-serif;font-size:84px;font-weight:900;letter-spacing:0.5em;">Dream Careers Banking Academy</div>
+                    
+                    
+                </div>
+            </div>
+            <div>
+                <img data-u="image" data-src="{% static 't4.jpg' %}" />
+                <div data-ts="flat" data-p="540" data-po="40% 50%" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-t="6" style="left:350px;top:360px;width:900px;height:500px;position:absolute;">
+                        
+                        
+                        <svg viewbox="0 0 800 100" width="800" height="100" data-t="9" style="left:10px;top:200px;display:block;position:absolute;opacity:0;font-family:'Roboto Condensed',sans-serif;font-size:40px;font-weight:900;letter-spacing:0.1em;overflow:visible;">
+                            <text fill="rgba(255,255,255,0.7)" stroke="#ff9500" text-anchor="middle" x="400" y="100">We provide the best coaching for Competitive Exams 
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color:#000000;">
+                <img data-u="image" style="opacity:0.8;" data-src="{% static 't5.jpg' %}" />
+                <div data-ts="flat" data-p="1080" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                    <svg viewbox="0 0 600 400" data-ts="preserve-3d" width="600" height="400" data-tchd="jssor_1_msk_3" style="left:255px;top:0px;display:block;position:absolute;overflow:visible;">
+                        <g mask="url(#jssor_1_msk_3)">
+                            <path data-to="300px -180px" fill="none" stroke="rgba(250,251,252,0.5)" stroke-width="20" d="M410-350L410-10L190-10L190-350Z" x="190" y="-350" data-t="10" style="position:absolute;overflow:visible;"></path>
+                        </g>
+                    </svg>
+                    <svg viewbox="0 0 800 72" data-to="50% 50%" width="800" height="72" data-t="11" style="left:-800px;top:78px;display:block;position:absolute;font-family:'Roboto Condensed',sans-serif;font-size:84px;font-weight:900;overflow:visible;">
+                        <text fill="#fafbfc" text-anchor="middle" x="400" y="72">ARE YOU READY 
+                        </text>
+                    </svg>
+                    <svg viewbox="0 0 800 72" data-to="50% 50%" width="800" height="72" data-t="12" style="left:1600px;top:153px;display:block;position:absolute;font-family:'Roboto Condensed',sans-serif;font-size:60px;font-weight:900;overflow:visible;">
+                        <text fill="#fafbfc" text-anchor="middle" x="400" y="72">TO APPLY?
+                        </text>
+                    </svg>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" data-src="{% static 'slider1.webp' %}" />
+                <div data-ts="flat" data-p="1080" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                    <div data-to="50% 50%" data-t="13" style="left:100px;top:-20px;width:800px;height:200px;position:absolute;opacity:0;">
+                        <div style="left:94px;top:35px;width:480px;height:90px;position:absolute;color:blue;font-family:'Roboto Condensed',sans-serif;font-size:72px;line-height:1.2;">PROVIDE HIGHEST QUALITY</div>
+                        <div style="left:307px;top:350px;width:400px;height:50px;position:absolute;color:blue;font-family:'Roboto Condensed',sans-serif;font-size:42px;line-height:1.1;text-align:center;background-color:rgba(72,77,76,0.5);">EDUCATION TO STUDENTS</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" data-src="{% static 'slider2.webp' %}" />
+                <div data-ts="flat" data-p="1080" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                    <div data-to="50% 50%" data-t="14" style="left:690px;top:140px;width:600px;height:150px;position:absolute;opacity:0;color:#36072d;font-family:Georgia,'Times New Roman',Times,serif;font-size:60px;line-height:1.2;letter-spacing:0.1em;">Our Students has been selected in Various sectors.</div>
+                    <img data-to="50% 50%" data-t="15" style="left:780px;top:350px;width:344px;height:157px;position:absolute;opacity:0;max-width:344px;" data-src="img/wine-atlantic-ocean.png" />
+                    <img data-to="50% 50%" data-t="16" style="left:1330px;top:8px;width:172px;height:131px;position:absolute;opacity:0;max-width:172px;" data-src="img/wine-badge.png" />
+                </div>
+            </div>
+        </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">slider html</a>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb132" style="position:absolute;bottom:24px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:12px;height:12px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
+    </div>
+    <script type="text/javascript">jssor_1_slider_init();
+    </script>
+    <!-- #endregion Jssor Slider End -->
+
+
+
+<script>
+$(document).ready (function(){
+$('.slider').bxSlider({
+auto: true,
+autoControls: true
+});
+});
+</script>
+<div class="row text-center" id="intro">
+<div class="col-md-10 col-md-offset-1">
+<h2 id="font">HARNESS YOURSELF FOR BEST <br> BANKING SKILL</h2>
+
+<br>
+<br>
+<div class="col-md-4">
+<div class="col-md-12 threedivs">
+<span class="glyphicon glyphicon-thumbs-up icon" ></span>
+<h3>PERFECT <br>KNOWLEDGE</h3>
+</div>
+</div>
+<div class="col-md-4">
+<div class="col-md-12 threedivs">
+<span  class="glyphicon glyphicon-ok icon"></span>
+<h3>PERFECT PREPARATION</h3>
+
+</div>
+</div>
+<div class="col-md-4">
+<div class="col-md-12 threedivs">
+<span  class="glyphicon glyphicon glyphicon-send icon"></span>
+<h3>PERFECT OPPORTUNITIES</h3>
+
+</div>
+</div>
+</div>
+</div>
+<div class="row" id="updates">
+<h1 id="font" class="text-center"><b>UPDATE AND ANNOUNCEMENT</b><h1>
+<br><br>
+<div class="col-md-6">
+<h2 style="color:#21b7fc;"><b>Latest Updates</b><h2>
+<marquee direction ="up">
+<ul>
+<li><h4>Union budget 2020-2021</h4></li>
+<li><h4>Highlight of INSURANCE&FINANCIAL MARKETING AWARNESS NOTE-2019</h4></li>
+<li><h4>PTR(POINTS TO REMEMBER)</h4></li>
+<li><h4>Hightlights Of Economic Survey 2019-20</h4></li>
+</ul>
+</marquee>
+</div>
+<div class="col-md-6" id="vacancy" style="height: 250px;">
+<br>
+<a href="/vacancy/"><h1 class="text-center"><b>Vacancy & Announcements</b></h1>
+
+<h3 class="text-center" id="blinktext" style="color:#e50000"><blink><b>8000 Vacancies of Clerical Cadre</b></blink></h3></a>
+</div>
+</div>
+
+<div class="row" id="banner" style="height: 500px;">
+
+<h3 class="text-center"  style="color:black;"><b>Dream Careers Banking Academy 
+welcomes you to explore the world of the largest bank Pre-recruitment Training
+ Institute in India</b> </h3>
+ <br><br><br><br>
+ <div class="col-md-4">
+ <span class="count" id="cnt"><b>360000</b></span>
+<h3><b>STUDENTS TRAINED <br>SO FAR</b></h3>
+</div>
+<div class="col-md-4">
+<span class="count" id="cnt"><b>42</b></span><span id="cnt">Yrs</span>
+<h3><b>OF TRAINING IN BANKING SECTOR</b></h3>
+</div>
+<div class="col-md-4 ">
+<span class="count" id="cnt"><b>91000</b></span>
+<h3><b>STUDENTS IN VARIOUS BANKS</b></h3>
+</div>
+
+</div>
+<div class="row text-center" id="interest">
+<h3  id="font" >I AM INTERESTED IN </h3>
+<br>
+<div class="col-md-4" >
+<div class="col-md-12 interest">
+<img src="{% static 't8.jpg' %}"height="125" width="200"/>
+<p><b>OPPORTUNITY IN BANK</b></p>
+<a href="/vacancy/"><button id="b" >VIEW MORE</button></a>
+</div>
+</div>
+<div class="col-md-4">
+<div class="col-md-12 interest">
+<img src="{% static 't9.jpg' %}"height="125" width="200"/>
+<p><b>COURSES</b></p>
+<a href="/courses/"><button id="b">VIEW MORE</button></a>
+</div>
+</div>
+<div class="col-md-4" >
+<div class="col-md-12 interest">
+<img src="{% static 't10.jpg' %}"height="125" width="125"/>
+<p><b>STUDY MATERIAL</b></p>
+<a href="/studymaterial/"><button id="b">VIEW MORE</button></a>
+</div>
+</div>
+</div>
+<div class="row text-center" id="success">
+<h1><b>SUCCESS STORIES</b></h1>
+<br>
+<br>
+<div class="row">
+{% for ss in successstar %}
+<div class="col-md-3">
+<img src="/media/{{ ss.photo }}" height="200" width="200"/>
+</div>
+{% endfor %}
+<!--<div class="col-md-3">
+<img src="{% static 'g8.jpg' %}"height="200" width="200"/>
+</div>
+<div class="col-md-3">
+<img src="{% static 'g9.jpg' %}"height="200" width="200"/>
+</div>
+<div class="col-md-3">
+<img src="{% static 'g10.jpg' %}"height="200" width="200"/>
+</div>-->
+</div>
+<br>
+<br>
+<br>
+<h4 style="color: white;">We Take imensive pride in saying that we are in this field from the<br> past four decades
+and every year several of our successful student<br> make it to our secure job in Prestigious
+Banks and Insurance<br> organisations across India. </h4>
+<br>
+
+<div ><a href="/success/"><button style="border: 3px solid white; width: 250px; background-color:#21b7fc; color:white;">Read More Of Success Stories</button></div></a>
+</div>
+
+
+{% endblock %}

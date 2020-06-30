@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="row" id="header2">
+<nav class="navbar-inverse" id="nav">
+<ul class="nav navbar-nav">
+<h2>Vacancies</h2>
+</ul>
+</nav>
+</div>
+
+
+
+
+<!--<h1 class="text-center success1"><b>Vacancies</b></h1>-->
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+<table class="table table-bordered table-striped table-hover" style="border:5px double black; border-collapse:collapse;">
+
+<thead>
+<tr>
+<th>Company Name</th>
+<th>Post</th>
+<th>No. of Vacancy</th>
+<th>Eligibility</th>
+<th>Date</th>
+</tr>
+<div id="p1">
+{% for vacancy in object_list %}
+
+
+<tr>
+<td>
+<a href='{{ vacancy.companylink}}' target='_blank'>
+<p>{{vacancy.companyname}} </br></br>
+</a>
+</td>
+
+<td>
+<a href='{{ vacancy.postlink }}' target='_blank'>
+<p>{{vacancy.post }}</br></br>
+</a>
+</td>
+
+<td>
+<p>{{ vacancy.noofvacancy }}</p>
+</td>
+
+<td>
+<p>{{ vacancy.eligibility }}</p>
+</td>
+
+<td>
+<p>{{ vacancy.date }}</p>
+</td>
+</tr>
+{% endfor %}
+</div>
+</thead>
+</table>
+</div>
+</div></br></br>
+
+{% endblock %} 
